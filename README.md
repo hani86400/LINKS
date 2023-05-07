@@ -8,9 +8,9 @@ This site was built using (https://pages.github.com/).
 <br/>
 [أتمتة اﻹصدار والنشر وغيرها ](https://youtu.be/1121pbK1_jk?t=5992)
 <br/>
-[EEEE](https://spring.io/guides/gs/maven/).
+[maven](https://spring.io/guides/gs/maven/).
 <br/>
-[EEEE](https://pages.github.com/).
+[best-practices-to-build-java-containers-with-docker](https://snyk.io/blog/best-practices-to-build-java-containers-with-docker/).
 <br/>
 [EEEE](https://pages.github.com/).
 <br/>
