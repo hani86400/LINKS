@@ -38,3 +38,15 @@ https://blog.mclaughlinsoftware.com/2022/12/19/almalinuxjavamysql/
 <br/>
 <br/>
 <br/>
+
+
+docker run -d --name prometheus-docker -p 9090:9090 --mount type=bind,source=$PWD/prometheus.yml,target=/etc/prometheus/prometheus.yml --network monitoring_default prom/prometheus
+
+
+```
+http://localhost:9090
+```
+
+
+
+
