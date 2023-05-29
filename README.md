@@ -41,7 +41,7 @@ https://blog.mclaughlinsoftware.com/2022/12/19/almalinuxjavamysql/
 
 
 ```
-docker run -d --name prometheus-docker -p 9090:9090 --mount type=bind,source=$PWD/prometheus.yml,target=/etc/prometheus/prometheus.yml --network monitoring_default prom/prometheus
+docker run -d --name prometheus-docker -p 9090:9090 --mount type=bind,source=$PWD/prometheus.yml,target=/etc/prometheus/prometheus.yml --network monitoring_default prom/prometheus:v2.44.0@sha256:6f764183520fcc859ad6bffc6dad937220ae491aea931891e9ffee4d946c0ac3
 ```
 
 ```
