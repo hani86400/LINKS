@@ -68,3 +68,7 @@ services:
 
 
 
+```
+docker run -d --name grafana-docker -p 3000:3000 -v grafana_data:/var/lib/grafana --network monitoring_default grafana/grafana
+```
+
