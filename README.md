@@ -74,7 +74,7 @@ docker run -d --name grafana-docker -p 3000:3000 -v grafana_data:/var/lib/grafan
 Navigate to Dashboard then Import and use the dashboard id 1860 then Load From the last section choose Prometheus then Import
 
 
-'''
+```
 #prometheus.yml
 global:
   scrape_interval:     15s
@@ -89,4 +89,4 @@ scrape_configs:
     static_configs:
       - targets: ['node_exporter:9100']
 
-'''
+```
