@@ -69,6 +69,6 @@ services:
 
 
 ```
-docker run -d --name grafana-docker -p 3000:3000 -v grafana_data:/var/lib/grafana --network monitoring_default grafana/grafana
+docker run -d --name grafana-docker -p 3000:3000 -v grafana_data:/var/lib/grafana --network monitoring_default grafana/grafana:9.5.2@sha256:2aafd24a138277142a86b6ed43b7537e1ec8226478f5240c459e9330a3461cdb
 ```
 Navigate to Dashboard then Import and use the dashboard id 1860 then Load From the last section choose Prometheus then Import
