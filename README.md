@@ -50,7 +50,7 @@ version: '3.8'
 
 services:
   node_exporter:
-    image: prom/node-exporter:latest
+    image: prom/node-exporter:v1.6.0@sha256:4c607459b09ad6bcf4d73986f9060ae6508f789abf85c0c4459809ddf3e1e7a0
     container_name: node-exporter
     restart: unless-stopped
     volumes:
