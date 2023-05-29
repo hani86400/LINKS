@@ -72,3 +72,21 @@ services:
 docker run -d --name grafana-docker -p 3000:3000 -v grafana_data:/var/lib/grafana --network monitoring_default grafana/grafana:9.5.2@sha256:2aafd24a138277142a86b6ed43b7537e1ec8226478f5240c459e9330a3461cdb
 ```
 Navigate to Dashboard then Import and use the dashboard id 1860 then Load From the last section choose Prometheus then Import
+
+
+'''
+#prometheus.yml
+global:
+  scrape_interval:     15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'node_exporter'
+    static_configs:
+      - targets: ['node_exporter:9100']
+
+'''
