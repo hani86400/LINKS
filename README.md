@@ -31,6 +31,7 @@ https://blog.gitnux.com/code/java-database-connectivity-with-mysql/
 <br/>
 https://blog.mclaughlinsoftware.com/2022/12/19/almalinuxjavamysql/
 <br/>
+https://www.baeldung.com/ops/docker-image-change-installation-directory
 <br/>
 <br/>
 <br/>
@@ -39,54 +40,3 @@ https://blog.mclaughlinsoftware.com/2022/12/19/almalinuxjavamysql/
 <br/>
 <br/>
 
-
-```
-docker run -d --name prometheus-docker -p 9090:9090 --mount type=bind,source=$PWD/prometheus.yml,target=/etc/prometheus/prometheus.yml --network monitoring_default prom/prometheus:v2.44.0@sha256:6f764183520fcc859ad6bffc6dad937220ae491aea931891e9ffee4d946c0ac3
-```
-
-```
----
-version: '3.8'
-
-services:
-  node_exporter:
-    image: prom/node-exporter:v1.6.0@sha256:4c607459b09ad6bcf4d73986f9060ae6508f789abf85c0c4459809ddf3e1e7a0
-    container_name: node-exporter
-    restart: unless-stopped
-    volumes:
-      - /proc:/host/proc:ro
-      - /sys:/host/sys:ro
-      - /:/rootfs:ro
-    command:
-      - '--path.procfs=/host/proc'
-      - '--path.rootfs=/rootfs'
-      - '--path.sysfs=/host/sys'
-      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
-    ports:
-      - "9100:9100"
-```
-
-
-
-```
-docker run -d --name grafana-docker -p 3000:3000 -v grafana_data:/var/lib/grafana --network monitoring_default grafana/grafana:9.5.2@sha256:2aafd24a138277142a86b6ed43b7537e1ec8226478f5240c459e9330a3461cdb
-```
-Navigate to Dashboard then Import and use the dashboard id 1860 then Load From the last section choose Prometheus then Import
-
-
-```
-#prometheus.yml
-global:
-  scrape_interval:     15s
-
-scrape_configs:
-  - job_name: 'prometheus'
-    scrape_interval: 5s
-    static_configs:
-      - targets: ['localhost:9090']
-
-  - job_name: 'node_exporter'
-    static_configs:
-      - targets: ['node_exporter:9100']
-
-```
