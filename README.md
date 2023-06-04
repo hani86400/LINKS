@@ -36,9 +36,9 @@ https://blog.mclaughlinsoftware.com/2022/12/19/almalinuxjavamysql/
 <br/>
 https://www.baeldung.com/ops/docker-image-change-installation-directory
 <br/>
-```
+'''
 cat ~/.ssh/id_rsa.pub | ssh git@remote-server "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
-```
+'''
 <br/>
 <br/>
 <br/>
