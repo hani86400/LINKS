@@ -55,4 +55,42 @@ cat ~/.ssh/id_rsa.pub | ssh git@remote-server "mkdir -p ~/.ssh && cat >>  ~/.ssh
 
 https://www.linode.com/docs/api/stackscripts
 
+```
+if [[ $ans != "y" && $ans != "Y" ]]; then
 
+[ $EUID -ne 0 ] && echo "Error:This script must be run as root!" && exit 1
+
+wget --no-check-certificate -qO '/ddreinst/vmlinuz' "$CentOSMirror/vmlinuz"
+
+ipNum() {
+  local IFS='.'
+  read ip1 ip2 ip3 ip4 <<<"$1"
+  echo $((ip1*(1<<24)+ip2*(1<<16)+ip3*(1<<8)+ip4))
+}
+
+
+            echo -e "\n⚠️  \033[38;5;208mPlease choose yes or no\033[0m ⚠️\n"
+
+function check_env_vars {
+    local missing_vars=()
+    for var in "$@"; do
+        if [ -z "${!var}" ]; then
+            missing_vars+=("$var")
+        fi
+    done
+
+    if [ ${#missing_vars[@]} -ne 0 ]; then
+        echo -e "\n\033[38;5;208mThe following environment variables are required for this command but are not set:\033[0m\n"
+        for var in "${missing_vars[@]}"; do
+            echo -e "\033[0;36m$var\033[0m"
+        done
+        echo ""
+        exit 1
+    fi
+}
+
+
+time sudo dd bs=4M if=ubuntu-19.04-desktop-amd64.iso of=${device} conv=fdatasync conv=sync,noerror
+
+
+```
