@@ -1,3 +1,5 @@
+https://www.shellhacks.com/curl-add-header-multiple-headers-authorization/
+
 https://www.linode.com/docs/guides/solving-real-world-problems-with-bash-scripts-a-tutorial
 
 https://www.tecmint.com/check-linux-os-version/
