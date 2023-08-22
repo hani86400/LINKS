@@ -207,7 +207,10 @@ git clone -b 5.2 --single-branch https://github.com/laravel/quickstart-intermedi
 
 
 
-
+###  replace checkout@v2 with checkout@v3
+```
+find . -type f -name "*.yml" -print0 | xargs -0 sed -i '' -e 's/actions\/checkout@v2/actions\/checkout@v3/g'
+```
 
 
 
