@@ -1,3 +1,11 @@
+https://stackoverflow.com/questions/22312545/github-api-to-create-a-file
+https://stackoverflow.com/questions/69069145/using-curl-for-pushing-a-file-to-github-repository
+
+
+
+
+
+
 https://www.shellhacks.com/curl-add-header-multiple-headers-authorization/
 
 https://www.linode.com/docs/guides/solving-real-world-problems-with-bash-scripts-a-tutorial
