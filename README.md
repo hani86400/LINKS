@@ -224,6 +224,20 @@ find . -type f -name "*.yml" -print0 | xargs -0 sed -i '' -e 's/actions\/checkou
 https://unix.stackexchange.com/questions/32182/simple-command-line-http-server
 
 
+Set permissions on the web directory /var/www/
+It is useful to change the permissions on the www directory to allow your user to update the webpages without needing to be root.
+
+Change the directory owner and group
+sudo chown www-data:www-data /var/www
+allow the group to write to the directory
+sudo chmod 775 /var/www
+Add the pi user to the www-data group
+sudo usermod -a -G www-data pi
+
+You should logout and back in - to pick up group permissions, or if running X you can just start a new terminal.
+
+
+
 
 
 
