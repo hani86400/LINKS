@@ -236,7 +236,7 @@ sudo usermod -a -G www-data pi
 
 You should logout and back in - to pick up group permissions, or if running X you can just start a new terminal.
 
-
+https://learn.filtered.com/hubfs/Definitive%20100%20Most%20Useful%20Productivity%20Racks.png
 
 
 
