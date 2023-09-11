@@ -240,4 +240,9 @@ https://learn.filtered.com/hubfs/Definitive%20100%20Most%20Useful%20Productivity
 
 
 
-
+### https://www.imyfone.com/backup-restore-android/how-to-open-android-sms-backup-files-on-pc/
+```
+dd if=userdata_20100101_000617.backup  skip=512 bs=128k iflag=nocache,skip_bytes oflag=nocache,append conv=notrunc of=img.ext4 
+dd if=userdata_20100101_000617.backup1 skip=512 bs=128k iflag=nocache,skip_bytes oflag=nocache,append conv=notrunc of=img.ext4 
+dd if=userdata_20100101_000617.backup2 skip=512 bs=128k iflag=nocache,skip_bytes oflag=nocache,append conv=notrunc of=img.ext4
+```
